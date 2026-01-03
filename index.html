@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Colaborador</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container" id="main-container">
+        <div id="login-area">
+            <div class="header-section">
+                <h2>Portal do Colaborador</h2>
+                <p class="subtitle">Acesse sua escala de trabalho 6x2</p>
+            </div>
+
+            <form id="login-form">
+                <div class="input-group">
+                    <label>Matrícula</label>
+                    <input type="text" id="matricula" required placeholder="Ex: AC12345678">
+                </div>
+                <div class="input-group">
+                    <label>Nome Completo (Opcional)</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+                <button type="submit" class="btn btn-primary" id="login-btn">
+                    <span id="btn-text">Entrar no Sistema</span>
+                    <div class="spinner" id="btn-spinner"></div>
+                </button>
+            </form>
+            <div id="message"></div>
+        </div>
+
+        <div id="dashboard-area">
+            <div class="header-section dashboard-header">
+                <h2 id="welcome-message">Olá, Colaborador</h2>
+                <p>Confira sua escala</p>
+            </div>
+
+            <div class="user-info-grid" id="data-area"></div>
+
+            <div class="calendar-section">
+                <div class="calendar-header">
+                    <h3>Escala Mensal</h3>
+                    <select id="month-select" onchange="updateCalendar()"></select>
+                </div>
+                <div class="calendar-grid" id="calendar-body"></div>
+            </div>
+            
+            <div class="action-buttons">
+                <button onclick="downloadPDF()" class="btn btn-pdf">💾 Baixar PDF</button>
+                <button class="btn btn-outline" onclick="logout()">Sair</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
