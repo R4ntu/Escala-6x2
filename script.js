@@ -1,4 +1,4 @@
-const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxR7He2YdyysnbaGcp69PurMoUOyHp-l0tbVB2MVWQrQ4pnFrs3QdT4f8dzrDMGxcy8/exec"; 
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwt-EXnMUdwURsKMt8-wfxVBVAMwzsESoegda6TqHk9Ihprafzl6nQjqtMV8wlT_PAe/exec"; 
 
 // Elementos DOM
 const mainContainer = document.getElementById('main-container');
